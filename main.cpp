@@ -124,7 +124,7 @@ int main(int argc, char *argv[]) {
     for (uint64_t i = 0; i < n2; i++) {
         uint64_t h = (state[0].val & TAKE_MASK);
         if (tab.find(h) != tab.end()) {
-            int j = tab[h];
+            uint64_t j = tab[h];
             printf("Collision: steps %lu %lu\n", i, j);
             printf("  (0x%s, 0, ...) -> %016lx\n",
                 hexc(prev), h
